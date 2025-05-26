@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Año Fuera - POC</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Tailwind CDN -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+<body>
+    <div id="app-container">
+        <!-- Setup Screen -->
+        <div id="setup-screen">
+            <h1>Configuración del Juego</h1>
+            <div>
+                <label for="num-players">Número de Jugadores (1-8):</label>
+                <input type="number" id="num-players" name="num-players" min="1" max="8" value="2">
+            </div>
+            <div>
+                <label for="num-rounds">Número Total de Rondas:</label>
+                <input type="number" id="num-rounds" name="num-rounds" min="1" value="5">
+            </div>
+            <button id="start-game-btn">Iniciar Juego</button>
+        </div>
+
+        <!-- Game Screen (Initially Hidden) -->
+        <div id="game-screen" style="display: none;">
+            <h2 id="character-name-display">Nombre del Personaje Aquí</h2>
+            
+            <div id="player-inputs-container">
+                <!-- Player inputs will be generated here by JavaScript -->
+            </div>
+            
+            <button id="calculate-score-btn">Calcular Puntuaciones</button>
+            
+            <h3>Tabla de Puntuaciones</h3>
+            <table id="scoreboard" aria-label="Tabla de puntuaciones acumuladas">
+                <thead>
+                    <tr>
+                        <th>Jugador</th>
+                        <th>Puntuación Total</th>
+                    </tr>
+                </thead>
+                <tbody id="scoreboard-body">
+                    <!-- Scoreboard rows will be generated here by JavaScript -->
+                </tbody>
+            </table>
+            
+            <button id="next-character-btn">Siguiente Personaje</button>
+            <button id="restart-game-btn">Reiniciar Juego</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
